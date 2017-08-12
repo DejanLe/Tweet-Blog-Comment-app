@@ -1,0 +1,31 @@
+<%= form_with(model: blog, local: true) do |form| %>
+  <% if blog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
+
+      <ul>
+      <% blog.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+   <div class="field">
+    <span>Add Image</span>
+    <%= form.file_field :image, multipart: true, class: 'btn btn-success'   %>
+  </div>
+
+  <div class="field">
+    <span>Title of your Blog</span>
+    <%= form.text_field :title, id: :blog_title, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+     <span>Add post description</span>
+    <%= form.text_area :description, id: :blog_description, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>

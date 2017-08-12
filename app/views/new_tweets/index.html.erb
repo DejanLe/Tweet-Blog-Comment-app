@@ -1,0 +1,38 @@
+  <div class="all_tweet">
+ 
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <%  if user_signed_in? %>
+          <%= link_to ' Create New Tweet', new_new_tweet_path, class: 'btn btn-primary' %>
+          <% end %>
+        </div>
+        <div class="col-md-6">
+         
+
+          <% @new_tweets.each do |new_tweet| %> 
+           <div class="card">
+             <%=   image_tag  new_tweet.image_url unless new_tweet.image.blank?    %> 
+            <div class="card-body">
+              <p class="card-text">    <%= new_tweet.content %> </p>
+              <%= link_to 'Show', new_tweet %> 
+               <%  if user_signed_in? %>
+                 <%= link_to 'Edit', edit_new_tweet_path(new_tweet) %> 
+                 <%= link_to 'Destroy', new_tweet, method: :delete, data: { confirm: 'Are you sure?' } %> 
+                <% end %> 
+            </div>
+
+          </div> 
+          <% end %> 
+        </div>
+        <div class="col-md-3">
+          
+        </div>
+      
+     
+  </div>
+  </div> 
+</div>
+
+
+

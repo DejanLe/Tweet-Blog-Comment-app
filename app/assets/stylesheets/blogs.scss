@@ -1,0 +1,14 @@
+// Place all the styles related to the Blogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.new_blog_post{
+	padding-top:7rem;
+}
+.blog_show{
+	padding-top:7rem;
+}
+.blog_image img{
+	width: 100%;
+	height: auto;
+	min-height: 250px !important;
+}

@@ -1,0 +1,20 @@
+<div class="header">
+	<div class="jumbotron">
+		<div class="container ml-auto">
+		<div class="row">
+			<div class="col-md-6">
+				<h1>Write your nutrition plan</h1>
+				 <% if user_signed_in? %> 
+				<%= link_to 'Create Nutrition Plan', root_path, class: 'btn btn-primary btn-lg' %>  
+				<%= link_to 'Create Blog', new_blog_path, class: 'btn btn-success btn-lg' %>
+				<% end %>
+			</div>
+			<div class="col-md-6">
+				 <p>
+				 	Aenean pellentesque felis malesuada, malesuada augue eget, consequat sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla sed enim luctus, faucibus lectus et, luctus mauris. Duis suscipit vulputate libero quis dapibus. Phasellus ex metus, ultricies id scelerisque id, rutrum eu erat.
+				 </p>
+			</div>
+		</div>
+	</div>
+	</div> 
+</div>
