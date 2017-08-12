@@ -16,7 +16,7 @@
             <div class="card-body">
               <p class="card-text">    <%= new_tweet.content %> </p>
               <%= link_to 'Show', new_tweet %> 
-               <%  if user_signed_in? %>
+               <%  if user_signed_in? %> 
                  <%= link_to 'Edit', edit_new_tweet_path(new_tweet) %> 
                  <%= link_to 'Destroy', new_tweet, method: :delete, data: { confirm: 'Are you sure?' } %> 
                 <% end %> 

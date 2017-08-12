@@ -9,9 +9,11 @@
   				<h1><%= @blog.title %></h1>  
  					<p><%= @blog.description %></p> 
  					
- 					<%if user_signed_in? %>
-						<%= link_to 'Edit', edit_blog_path(@blog) %> |
-						<%= link_to 'Back', blogs_path %>
+ 					<% if user_signed_in? %>
+							<% if @blog.user_id == current_user.id %>
+							<%= link_to 'Edit', edit_blog_path(@blog) %> |
+							<%= link_to 'Back', blogs_path %>
+						<% end %>
 					<% end %>
 				<br>
 				<h4><%= @blog.comments.count %> Comments</h4>
